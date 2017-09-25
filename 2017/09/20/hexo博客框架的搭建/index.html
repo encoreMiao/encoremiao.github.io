@@ -12,7 +12,7 @@
 <meta property="og:url" content="http://mmblog.com/2017/09/20/hexo博客框架的搭建/index.html">
 <meta property="og:site_name" content="mm&#39;s blogs">
 <meta property="og:description" content="搭建hexo博客框架 hexo:快速简洁且高效的博客框架，hexo使用markdown解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 安装:安装前确认电脑中安装node.js和git(1)安装node.js:curl https://raw.github.com/creationix/nvm/master/install.sh | shnvm install stable(2)安装HexoN">
-<meta property="og:updated_time" content="2017-09-23T03:53:42.000Z">
+<meta property="og:updated_time" content="2017-09-23T10:43:25.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo博客框架的搭建">
 <meta name="twitter:description" content="搭建hexo博客框架 hexo:快速简洁且高效的博客框架，hexo使用markdown解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 安装:安装前确认电脑中安装node.js和git(1)安装node.js:curl https://raw.github.com/creationix/nvm/master/install.sh | shnvm install stable(2)安装HexoN">
@@ -135,7 +135,8 @@
 <p>在指定文件夹中新建所需要的文件:<br>hexo init 文件夹<br>cd 文件夹<br>npm install</p>
 <p>新建文章:<br>hexo new 博客名称 // 新建的文章都在source/ 的目录下 open之后可以直接编辑<br>hexo generate // 编辑md后生成html 简写:hexo g<br>hexo server // 可以简写成ser 本地预览</p>
 <p>主题设置:<br>git clone <a href="https://github.com/shinux/hexo-theme-adoubi.git" target="_blank" rel="external">https://github.com/shinux/hexo-theme-adoubi.git</a> themes/adoubi //主题设置<br>theme: adoubi // 配置文件中设置主题样式<br>重新generate和server预览</p>
-<p>发布:<br>在github上创建新仓库<br>在_config.yml中设置deploy<br>deploy:<br>  type: github<br>  repository: <a href="https://github.com/encoreMiao/mmblog" target="_blank" rel="external">https://github.com/encoreMiao/mmblog</a><br>hexo deploy //简写 hexo d ，注意在部署之前先generate</p>
+<p>发布:<br>在github上创建新仓库<br>在_config.yml中设置deploy<br>deploy:<br>  type: github<br>  repository: <a href="https://github.com/encoreMiao/mmblog" target="_blank" rel="external">https://github.com/encoreMiao/mmblog</a><br>hexo deploy //简写 hexo d ，注意在部署之前先generate<br>//npm install hexo-deployer-git –save//hexo 更新到3.0之后，github需要改为git，deploy时出现错误，Deployer not found: git执行该代码</p>
+<p>ps:<br>npm install hexo-deployer-git –save 出现错误<br>npm ERR! code EINTEGRITY<br>npm ERR! sha1-w2GT3Tzhwu7SrbfIAtu8d6gbHA8= integrity checksum failed when using sha1: wanted sha1-w2GT3Tzhwu7SrbfIAtu8d6gbHA8= but got sha1-s6hBkK3kOXkCzA3zh4cAupZoJpw=. (480809 bytes)<br>执行：<br>npm cache clean –force<br>npm install –update-binary –no-shrinkwrap<br>详见：<a href="https://github.com/cncjs/cncjs/issues/172" target="_blank" rel="external">https://github.com/cncjs/cncjs/issues/172</a></p>
 
   </div>
 </article>
